@@ -27,7 +27,7 @@ body{
     padding: 10px;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     scroll-snap-align: start;
 }
 
@@ -39,7 +39,11 @@ body{
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 
+        2fr
+        1fr
+        1fr
+        ;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -56,6 +60,9 @@ body{
 .IMAGE,.INFO{
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: -8px 9px 12px 0px rgba(0,0,0,0.53);
+    -webkit-box-shadow: -8px 9px 12px 0px rgba(0,0,0,0.53);
+    -moz-box-shadow: -8px 9px 12px 0px rgba(0,0,0,0.53);
 }
 
 .IMAGE{
@@ -67,8 +74,12 @@ body{
 
 @media only screen and (max-width: 830px) {
     .container{
-        grid-template-columns: 1fr 1fr 2fr;
-        grid-template-rows: 1fr 0.3fr 1fr;
+        grid-template-columns: 1fr 0.5fr 2fr;
+        grid-template-rows:
+            2fr
+            1fr
+            1fr
+            ;
         grid-template-areas:
         ". . IMAGE"
         "INFO INFO INFO"
